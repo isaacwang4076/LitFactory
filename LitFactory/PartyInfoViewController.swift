@@ -39,6 +39,15 @@ class PartyInfoViewController: UIViewController {
         self.partyName.text = party.name
         self.genLocation.text = party.area
         self.partyMessage.text = party.message
+        Global.storage.child("partyImages/\(party.ID!).png").data(withMaxSize: 100*1024*1024, completion: {
+            (data, error) in
+            if data != nil {
+                self.partyImage.image = UIImage(data: data!)
+            }
+            else {
+                print ("* no party photo")
+            }
+        })
     }
     
     
