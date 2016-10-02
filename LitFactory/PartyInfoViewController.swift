@@ -16,12 +16,14 @@ class PartyInfoViewController: UIViewController {
     @IBOutlet var partyImage: UIImageView!
     @IBOutlet var partyMessage: UITextView!
     @IBAction func join(_ sender: AnyObject) {
+        sendNJR(party: partyList[currentPartyIndex])
         self.showNextParty()
     }
     @IBAction func naw(_ sender: AnyObject) {
         self.showNextParty()
     }
     @IBAction func reset(_ sender: AnyObject) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func showNextParty() {
