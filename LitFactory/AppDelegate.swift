@@ -34,9 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //getMessages()
         
-        /*let nje = NotificationJoinRequest(type: Global.TYPE_JOIN_REQ, pictureID: "userID2", partyID: "partyID", partyName: "partyName", requesterID: "userID2", requesterName: "Isaac2", supplies: "Fifth of Smirnoff")
-        print("*", nje.generateMessage());
-        nje.pushToFirebase(usersWhoCare: ["userID"])*/
         /*let nja = NotificationJoinApproval(type: Global.TYPE_JOIN_APP, pictureID: "userID", partyID: "partyID", partyName: "partyName", approverName: "Isaac1")
         nja.pushToFirebase(usersWhoCare: ["userID"])*/
         

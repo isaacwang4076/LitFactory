@@ -19,6 +19,13 @@ struct Global {
     // NOTIFICATION TYPE
     static let TYPE_JOIN_REQ = 0;
     static let TYPE_JOIN_APP = 1;
+    
+    // EVENT NAME
+    static let ADJ = ["Lit", "Dank", "Explosive", "Dangerous", "Toxic", "Harambe", "Excessive", "Shitty", "Degenerate", "Drunken", "Unintelligent", "Savage", "Turnt", "Rebellious", "Devil's"]
+    static let FUNC = ["Party", "Function", "Funeral", "TurnUp", "Rager", "Orgy", "Festival"]
+    static let NUM = ["69", "420", "1738", "679", "1337", "666", "369"]
+    
+    static let ID_LEN = 10;
 }
 
 func setParty(party: Party) {
@@ -61,7 +68,6 @@ func pushMessageToFirebase(message: Message) {
     })
 }
 
-// untested
 func getMessages() {
     Global.database.child("UserIDToConversationIDs").child(Global.me.getID()).observe(.value, with: { (conversationIDsSnapshot) in
         for conversationIDSnapshot in conversationIDsSnapshot.children.allObjects {
@@ -77,7 +83,7 @@ func getMessages() {
 }
 
 func sendNJR(party: Party) {
-    let njr = NotificationJoinRequest(type: Global.TYPE_JOIN_REQ, pictureID: Global.me.getID(), partyID: party.getID(), partyName: party.getName(), requesterID: Global.me.getID(), requesterName: Global.me.getName(), supplies: Global.browseSession.supplies)
+    let njr = NotificationJoinRequest(type: Global.TYPE_JOIN_REQ, pictureID: Global.me.getID(), partyID: party.getID(), partyName: party.getName(), requesterID: Global.me.getID(), requesterName: Global.me.getName(), proofPhotoID: "yo", supplies: Global.browseSession.supplies)
     njr.pushToFirebase(usersWhoCare: [party.getHostID()])
 }
 
@@ -99,15 +105,47 @@ func combineUserIDs(ID1: String, ID2: String) -> String {
     return ID2 + ID1;
 }
 
-func generateEventName() -> String {
-    return ""
+func generatePartyID() -> String {
+    
+    let allowedChars = Array("0123456789".characters)
+    let allowedCharsCount = UInt32(allowedChars.count)
+    var ID = "party"
+    
+    for _ in (0..<Global.ID_LEN) {
+        let randomNum = Int(arc4random_uniform(allowedCharsCount))
+        let newCharacter = allowedChars[randomNum]
+        ID += String(newCharacter)
+    }
+    
+    return ID
 }
 
-func generateMessageID() -> String {
-    return "messageID"
+func generatePartyName() -> String {
+    var name = ""
+    
+    var randomNum = Int(arc4random_uniform(UInt32(Global.ADJ.count)))
+    name += Global.ADJ[randomNum] + " "
+    
+    randomNum = Int(arc4random_uniform(UInt32(Global.FUNC.count)))
+    name += Global.FUNC[randomNum] + " "
+    
+    randomNum = Int(arc4random_uniform(UInt32(Global.NUM.count)))
+    name += Global.NUM[randomNum]
+    
+    return name
 }
 
 func generateNotifID() -> String {
-    let newID = " "
-    return newID
+    
+    let allowedChars = Array("0123456789".characters)
+    let allowedCharsCount = UInt32(allowedChars.count)
+    var ID = "notif"
+    
+    for _ in (0..<Global.ID_LEN) {
+        let randomNum = Int(arc4random_uniform(allowedCharsCount))
+        let newCharacter = allowedChars[randomNum]
+        ID += String(newCharacter)
+    }
+    
+    return ID
 }
