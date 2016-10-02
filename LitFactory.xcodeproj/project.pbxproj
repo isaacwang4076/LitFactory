@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28F43C921DA0954E00BCE785 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28F43C911DA0954E00BCE785 /* GoogleService-Info.plist */; };
 		28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836501DA07F7F005BFF77 /* AppDelegate.swift */; };
 		28F836531DA07F7F005BFF77 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836521DA07F7F005BFF77 /* FirstViewController.swift */; };
 		28F836551DA07F7F005BFF77 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836541DA07F7F005BFF77 /* SecondViewController.swift */; };
@@ -17,7 +18,7 @@
 		28F836731DA07F7F005BFF77 /* LitFactoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836721DA07F7F005BFF77 /* LitFactoryUITests.swift */; };
 		28F836811DA08182005BFF77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836801DA08182005BFF77 /* User.swift */; };
 		28F836831DA08301005BFF77 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836821DA08301005BFF77 /* Global.swift */; };
-		28F836851DA083D0005BFF77 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 28F836841DA083D0005BFF77 /* GoogleService-Info (1).plist */; };
+		28F836871DA08929005BFF77 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836861DA08929005BFF77 /* Party.swift */; };
 		C0A9742C8856750A91C5A1A6 /* Pods_LitFactoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B037D2E78184423AF031CB /* Pods_LitFactoryTests.framework */; };
 		F40D83C5CB9898966592A0D7 /* Pods_LitFactoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7C4971271C4FDF9F5D6972 /* Pods_LitFactoryUITests.framework */; };
 		FC4B7B761BFCBC38B818FD64 /* Pods_LitFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7305C7F5CFF2C22594E2AA7 /* Pods_LitFactory.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28F43C911DA0954E00BCE785 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		28F8364D1DA07F7F005BFF77 /* LitFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F836501DA07F7F005BFF77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F836521DA07F7F005BFF77 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		28F836741DA07F7F005BFF77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F836801DA08182005BFF77 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		28F836821DA08301005BFF77 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		28F836841DA083D0005BFF77 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		28F836861DA08929005BFF77 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		4D7C4971271C4FDF9F5D6972 /* Pods_LitFactoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LitFactoryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA72B958408A8E1A3EEB6C7 /* Pods-LitFactoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitFactoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LitFactoryTests/Pods-LitFactoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C39C5D87E696583E1FC53AD /* Pods-LitFactoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitFactoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LitFactoryTests/Pods-LitFactoryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				28F836501DA07F7F005BFF77 /* AppDelegate.swift */,
 				28F836801DA08182005BFF77 /* User.swift */,
+				28F836861DA08929005BFF77 /* Party.swift */,
 				28F836821DA08301005BFF77 /* Global.swift */,
 				28F836521DA07F7F005BFF77 /* FirstViewController.swift */,
 				28F836541DA07F7F005BFF77 /* SecondViewController.swift */,
@@ -131,7 +134,7 @@
 				28F836591DA07F7F005BFF77 /* Assets.xcassets */,
 				28F8365B1DA07F7F005BFF77 /* LaunchScreen.storyboard */,
 				28F8365E1DA07F7F005BFF77 /* Info.plist */,
-				28F836841DA083D0005BFF77 /* GoogleService-Info (1).plist */,
+				28F43C911DA0954E00BCE785 /* GoogleService-Info.plist */,
 			);
 			path = LitFactory;
 			sourceTree = "<group>";
@@ -293,9 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F8365D1DA07F7F005BFF77 /* LaunchScreen.storyboard in Resources */,
+				28F43C921DA0954E00BCE785 /* GoogleService-Info.plist in Resources */,
 				28F8365A1DA07F7F005BFF77 /* Assets.xcassets in Resources */,
 				28F836581DA07F7F005BFF77 /* Main.storyboard in Resources */,
-				28F836851DA083D0005BFF77 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +450,7 @@
 				28F836551DA07F7F005BFF77 /* SecondViewController.swift in Sources */,
 				28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */,
 				28F836831DA08301005BFF77 /* Global.swift in Sources */,
+				28F836871DA08929005BFF77 /* Party.swift in Sources */,
 				28F836531DA07F7F005BFF77 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

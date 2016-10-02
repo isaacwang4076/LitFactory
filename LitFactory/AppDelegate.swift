@@ -8,16 +8,36 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        
+        
+        let isaac = User(ID: "userID", name: "Isaac")
+        let party = Party(ID: "partyID", host: "hostName", area: "area", location: "location")
+        
+        pushUserToFirebase(user: isaac)
+        pushEventToFirebase(party: party)
+        
+        // Listener for new party
+        /*Global.database.child("Parties").observe(.childAdded, with: {(partySnapshot) -> Void in
+            let party:Party = Party(partyDict: (partySnapshot).value as! NSDictionary)
+            setParty(party: party)
+        })
+        
+        // Listener for party change
+        Global.database.child("Parties").observe(.childChanged, with: {(partySnapshot) -> Void in
+            let party:Party = Party(partyDict: (partySnapshot).value as! NSDictionary)
+            setParty(party: party)
+        })*/
+        
         return true
     }
 

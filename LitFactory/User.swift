@@ -12,7 +12,7 @@ class User {
     let ID: String!
     let name: String!
     
-    init(ID: String!, name: String!) {
+    init(ID: String, name: String) {
         self.ID = ID
         self.name = name
     }
