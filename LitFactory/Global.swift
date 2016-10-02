@@ -7,10 +7,11 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import Firebase
 
 struct Global {
     static let database: FIRDatabaseReference = FIRDatabase.database().reference()
+    static let storage:FIRStorageReference = FIRStorage.storage().reference()
     static var parties = NSDictionary();
 }
 

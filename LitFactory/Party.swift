@@ -31,7 +31,6 @@ class Party {
         self.area = partyDict.value(forKey: "area") as! String!
         self.location = partyDict.value(forKey: "location") as! String!
         self.name = partyDict.value(forKey: "name") as! String!
-        self.attendees = partyDict.value(forKey: "attendees") as! [String]
         self.message = partyDict.value(forKey: "message") as! String!
     }
     
