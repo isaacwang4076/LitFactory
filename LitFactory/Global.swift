@@ -24,7 +24,7 @@ func setParty(party: Party) {
     Global.parties[party.getID()] = party;
 }
 
-func addAttendee(attendeeID: String, partyID: String) {
+func addAttendee(partyID: String, attendeeID: String) {
     Global.database.child("PartyIDToAttendeeIDs").child(partyID).childByAutoId().setValue(attendeeID);
 }
 
@@ -83,6 +83,11 @@ func sendNJR(party: Party) {
 func sendNJA(party: Party, approvedID: String) {
     let nja = NotificationJoinApproval(type: Global.TYPE_JOIN_APP, pictureID: party.getHostID(), partyID: party.getID(), partyName: party.getName(), approverName: Global.me.getName())
     nja.pushToFirebase(usersWhoCare: [approvedID])
+}
+
+func approveRequest(party: Party, approvedID: String) {
+    sendNJA(party: party, approvedID: approvedID)
+    addAttendee(partyID: party.getID(), attendeeID: approvedID)
 }
 
 // returns unique ID composed of two User's ID's in alphabetical order
