@@ -13,11 +13,11 @@ struct Global {
     static let database: FIRDatabaseReference = FIRDatabase.database().reference()
     static var me: User! = User(ID: "userID", name: "Isaac")
     static var parties = NSMutableDictionary();
+    static var browseSession: BrowseSession = BrowseSession(supplies: nil, location: (nil, nil))
     
     // NOTIFICATION TYPE
     static let TYPE_JOIN_REQ = 0;
     static let TYPE_JOIN_APP = 1;
-
 }
 
 func setParty(party: Party) {
