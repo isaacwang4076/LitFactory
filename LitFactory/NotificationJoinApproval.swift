@@ -96,21 +96,16 @@ class NotificationJoinApproval: Notification {
     // IMPLEMENT PROTOCOL METHODS -----------------------------------------------------------------------------
     
     override func onNotificationClicked(controller: NotificationViewController, userID: String) {
-        if (!viewed) {
-            // Set the local Notification to viewed
-            self.viewed = true
+        
+        // Set the local Notification to viewed
+        self.viewed = true
      
-            // Set the Notification on the database to viewed
-            setToViewed(userID: userID)
+        // Set the Notification on the database to viewed
+        setToViewed(userID: userID)
      
-            // Navigate to EventInfo for event
-            controller.tabBarController?.selectedIndex = 0;
-            if (controller.tabBarController?.selectedViewController is HomeViewController) {
-                (controller.tabBarController?.selectedViewController as! HomeViewController).proceedToBrowse(partyID: partyID)
-            } else {
-                (controller.tabBarController?.selectedViewController as! PartyInfoViewController).showPartyInfo(partyID: partyID)
-            }
-        }
+        // Navigate to EventInfo for event
+        controller.tabBarController?.selectedIndex = 0;
+        PartyInfoViewController.partyID = partyID;
      }
     
     override func generateMessage() -> String {

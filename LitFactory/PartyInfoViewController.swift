@@ -19,6 +19,7 @@ class PartyInfoViewController: UIViewController {
         sendNJR(party: partyList[currentPartyIndex])
         self.showNextParty()
     }
+    
     @IBAction func naw(_ sender: AnyObject) {
         self.showNextParty()
     }
@@ -26,7 +27,7 @@ class PartyInfoViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    var partyID:String?
+    static var partyID:String?
     
     func showNextParty() {
         if !self.partyList.isEmpty {
@@ -99,7 +100,15 @@ class PartyInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        pullAndShowParties()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        pullAndShowParties()
+    }
+    
+    func pullAndShowParties() {
         Global.database.child("Parties").observeSingleEvent(of: .value, with: {
             (snapshot) in
             let partySnapshots = snapshot.children.allObjects as? [FIRDataSnapshot]
@@ -111,7 +120,8 @@ class PartyInfoViewController: UIViewController {
                     self.partyList.append(party)
                 }
                 
-                self.showPartyInfo(partyID: self.partyID)
+                self.showPartyInfo(partyID: PartyInfoViewController.partyID)
+                PartyInfoViewController.partyID = nil
             }
         })
     }

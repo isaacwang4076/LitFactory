@@ -41,7 +41,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         
         print("*Pulling Notifs...")
         
-        database.child("NotifDatabase").child(Global.me.getID()).observeSingleEvent(of: .value, with: {
+        database.child("NotifDatabase").child(Global.me.getID()).observe(.value, with: {
             (userNotifs) in
             
             //Clear current notifs

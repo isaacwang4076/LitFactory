@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let party = Party(hostID: "userID", area: "area2", location: "location2")
         
         //pushUserToFirebase(user: isaac)
-        //pushEventToFirebase(party: party)
+        pushEventToFirebase(party: party)
         
         //addAttendee(attendeeID: "userID2", partyID: "partyID2")
         
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nja.pushToFirebase(usersWhoCare: ["userID"])*/
         
         //sendNJR(party: party)
-        sendNJA(party: party, approvedID: "userID")
+        //sendNJA(party: party, approvedID: "userID")
         
         // First pull
         Global.database.child("Parties").observeSingleEvent(of: .value, with: { (partiesSnapshot) in

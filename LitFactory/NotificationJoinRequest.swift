@@ -20,7 +20,7 @@ class NotificationJoinRequest: Notification {
     let requesterID: String!
     let requesterName: String!
     let proofPhotoID: String!
-    let supplies: String?
+    let supplies: String!
     
     // NEW NOTIFICATION CONSTRUCTOR
     // - Sets all variables and generates new notifID
@@ -32,7 +32,11 @@ class NotificationJoinRequest: Notification {
         self.requesterID = requesterID
         self.requesterName = requesterName
         self.proofPhotoID = proofPhotoID
-        self.supplies = supplies
+        if (supplies == nil || supplies == "") {
+            self.supplies = "nothing"
+        } else {
+            self.supplies = supplies
+        }
         
         // Superclass constructor
         super.init(type: type, pictureID: pictureID)
@@ -63,10 +67,6 @@ class NotificationJoinRequest: Notification {
         
         // Store unique variables
         let notifDict: NSMutableDictionary = ["partyID": (notif as! NotificationJoinRequest).partyID, "partyName": (notif as! NotificationJoinRequest).partyName, "requesterID": (notif as! NotificationJoinRequest).requesterID, "requesterName": (notif as! NotificationJoinRequest).requesterName, "proofPhotoID": (notif as! NotificationJoinRequest).proofPhotoID, "supplies": (notif as! NotificationJoinRequest).supplies]
-        
-        if ((notifDict.value(forKey: "supplies") as? String) == nil) {
-            notifDict.removeObject(forKey: "supplies")
-        }
         
         // Store common variables
         notifDict.addEntries(from: super.convertToDictionary(notif: notif) as [NSObject : AnyObject])

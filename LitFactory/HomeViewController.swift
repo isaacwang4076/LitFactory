@@ -15,30 +15,22 @@ class HomeViewController: UIViewController {
     @IBOutlet var specLocationText: UITextField!
     
     @IBAction func turnup(_ sender: AnyObject) {
-        proceedToBrowse(partyID: nil)
+        proceedToBrowse()
     }
     
     var partyID:String?
     
-    func proceedToBrowse(partyID: String?) {
+    func proceedToBrowse() {
         
         Global.browseSession = BrowseSession(supplies: bringingText.text, location: (genLocationText.text, specLocationText.text))
         
-        if (Global.browseSession.canHost!) {
+        /*if (Global.browseSession.canHost!) {
             performSegue(withIdentifier: "showPictureProof", sender: self)
-        } else {
-            if (partyID != nil) {
-                self.partyID = partyID
-                performSegue(withIdentifier: "showParties", sender: self)
-            }
         }
-        
-        /*if (self.bringingText.text?.isEmpty)! {
-            print("* no bringing text")
-            //alert
-        }
-            
         else {
+            performSegue(withIdentifier: "showParties", sender: self)
+        }*/
+        
             if ((self.genLocationText.text?.isEmpty)! && (specLocationText.text?.isEmpty)!) {
                 print ("* go to join party")
                 performSegue(withIdentifier: "showParties", sender: self)
@@ -50,8 +42,6 @@ class HomeViewController: UIViewController {
                 print ("* go to host page")
                 performSegue(withIdentifier: "showPictureProof", sender: self)
             }
-            
-        }*/
     }
     
     override func viewDidLoad() {
@@ -69,9 +59,6 @@ class HomeViewController: UIViewController {
         //transfer party info to photoVC
         if segue.identifier == "showPictureProof" {
             (segue.destination as! PhotoViewController).partyToUpload = Party.init(hostID: "my_id", area: self.genLocationText.text!, location: self.specLocationText.text!)
-        }
-        if segue.identifier == "showParties" {
-            (segue.destination as! PartyInfoViewController).partyID = self.partyID!
         }
     }
     
