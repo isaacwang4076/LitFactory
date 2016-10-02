@@ -17,6 +17,12 @@ class User {
         self.name = name
     }
     
+    func getAsDictionary() -> NSDictionary {
+        return [
+            "ID": ID,
+            "name": name]
+    }
+    
     func getID() -> String {
         return ID
     }

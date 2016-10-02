@@ -9,10 +9,10 @@
 import Foundation
 import FirebaseDatabase
 
-struct Globals {
+struct Global {
     static let database = FIRDatabase.database().reference()
 }
 
 func pushUserToFirebase(user: User) {
-    fb.child("Users").child(user.getID()).setValue(user.convertToDictionary())
+    Global.database.child("Users").child(user.getID()).setValue(user.getAsDictionary())
 }
