@@ -13,19 +13,21 @@
 		28F43C981DA0D55500BCE785 /* NotificationJoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F43C971DA0D55500BCE785 /* NotificationJoinRequest.swift */; };
 		28F43C9A1DA0DBC200BCE785 /* NotificationJoinApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F43C991DA0DBC200BCE785 /* NotificationJoinApproval.swift */; };
 		28F43C9C1DA0DEAD00BCE785 /* BrowseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F43C9B1DA0DEAD00BCE785 /* BrowseSession.swift */; };
-		28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836501DA07F7F005BFF77 /* AppDelegate.swift */; };
-		28F836531DA07F7F005BFF77 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836521DA07F7F005BFF77 /* FirstViewController.swift */; };
-		28F836551DA07F7F005BFF77 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836541DA07F7F005BFF77 /* SecondViewController.swift */; };
 		28F836581DA07F7F005BFF77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F836561DA07F7F005BFF77 /* Main.storyboard */; };
 		28F8365A1DA07F7F005BFF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F836591DA07F7F005BFF77 /* Assets.xcassets */; };
 		28F8365D1DA07F7F005BFF77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F8365B1DA07F7F005BFF77 /* LaunchScreen.storyboard */; };
 		28F836681DA07F7F005BFF77 /* LitFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836671DA07F7F005BFF77 /* LitFactoryTests.swift */; };
 		28F836731DA07F7F005BFF77 /* LitFactoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836721DA07F7F005BFF77 /* LitFactoryUITests.swift */; };
 		28F836811DA08182005BFF77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836801DA08182005BFF77 /* User.swift */; };
-		28F836831DA08301005BFF77 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836821DA08301005BFF77 /* Global.swift */; };
-		28F836871DA08929005BFF77 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836861DA08929005BFF77 /* Party.swift */; };
 		C0A9742C8856750A91C5A1A6 /* Pods_LitFactoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B037D2E78184423AF031CB /* Pods_LitFactoryTests.framework */; };
 		F40D83C5CB9898966592A0D7 /* Pods_LitFactoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7C4971271C4FDF9F5D6972 /* Pods_LitFactoryUITests.framework */; };
+		F67B07C41DA0EE6300E811CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836501DA07F7F005BFF77 /* AppDelegate.swift */; };
+		F67B07C51DA0EE6500E811CB /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836861DA08929005BFF77 /* Party.swift */; };
+		F67B07C61DA0EE6800E811CB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836821DA08301005BFF77 /* Global.swift */; };
+		F6AFD4EE1DA0A5E000C11C24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4ED1DA0A5E000C11C24 /* HomeViewController.swift */; };
+		F6AFD4F01DA0B07900C11C24 /* PartyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4EF1DA0B07900C11C24 /* PartyInfoViewController.swift */; };
+		F6AFD4F21DA0B49200C11C24 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4F11DA0B49200C11C24 /* HostViewController.swift */; };
+		F6AFD4F41DA0C0A400C11C24 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4F31DA0C0A400C11C24 /* PhotoViewController.swift */; };
 		FC4B7B761BFCBC38B818FD64 /* Pods_LitFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7305C7F5CFF2C22594E2AA7 /* Pods_LitFactory.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +57,6 @@
 		28F43C9B1DA0DEAD00BCE785 /* BrowseSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSession.swift; sourceTree = "<group>"; };
 		28F8364D1DA07F7F005BFF77 /* LitFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F836501DA07F7F005BFF77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28F836521DA07F7F005BFF77 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		28F836541DA07F7F005BFF77 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		28F836571DA07F7F005BFF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28F836591DA07F7F005BFF77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28F8365C1DA07F7F005BFF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +79,10 @@
 		B7D3EA04852A6349984A3396 /* Pods-LitFactoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitFactoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LitFactoryUITests/Pods-LitFactoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7305C7F5CFF2C22594E2AA7 /* Pods_LitFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LitFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53554B65C26FDC4812AF753 /* Pods-LitFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitFactory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LitFactory/Pods-LitFactory.debug.xcconfig"; sourceTree = "<group>"; };
+		F6AFD4ED1DA0A5E000C11C24 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6AFD4EF1DA0B07900C11C24 /* PartyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyInfoViewController.swift; sourceTree = "<group>"; };
+		F6AFD4F11DA0B49200C11C24 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		F6AFD4F31DA0C0A400C11C24 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,13 +143,15 @@
 				28F836861DA08929005BFF77 /* Party.swift */,
 				28F43C931DA0AE4900BCE785 /* Message.swift */,
 				28F836821DA08301005BFF77 /* Global.swift */,
+				F6AFD4ED1DA0A5E000C11C24 /* HomeViewController.swift */,
+				F6AFD4F31DA0C0A400C11C24 /* PhotoViewController.swift */,
+				F6AFD4EF1DA0B07900C11C24 /* PartyInfoViewController.swift */,
 				28F43C9B1DA0DEAD00BCE785 /* BrowseSession.swift */,
 				28F43C951DA0D32C00BCE785 /* Notification.swift */,
 				28F43C971DA0D55500BCE785 /* NotificationJoinRequest.swift */,
 				28F43C991DA0DBC200BCE785 /* NotificationJoinApproval.swift */,
-				28F836521DA07F7F005BFF77 /* FirstViewController.swift */,
-				28F836541DA07F7F005BFF77 /* SecondViewController.swift */,
 				28F836561DA07F7F005BFF77 /* Main.storyboard */,
+				F6AFD4F11DA0B49200C11C24 /* HostViewController.swift */,
 				28F836591DA07F7F005BFF77 /* Assets.xcassets */,
 				28F8365B1DA07F7F005BFF77 /* LaunchScreen.storyboard */,
 				28F8365E1DA07F7F005BFF77 /* Info.plist */,
@@ -271,6 +277,7 @@
 				TargetAttributes = {
 					28F8364C1DA07F7F005BFF77 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9U2WW96W28;
 						ProvisioningStyle = Automatic;
 					};
 					28F836621DA07F7F005BFF77 = {
@@ -461,15 +468,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67B07C61DA0EE6800E811CB /* Global.swift in Sources */,
+				F67B07C51DA0EE6500E811CB /* Party.swift in Sources */,
+				F67B07C41DA0EE6300E811CB /* AppDelegate.swift in Sources */,
+				F6AFD4EE1DA0A5E000C11C24 /* HomeViewController.swift in Sources */,
 				28F836811DA08182005BFF77 /* User.swift in Sources */,
-				28F836551DA07F7F005BFF77 /* SecondViewController.swift in Sources */,
+				F6AFD4F21DA0B49200C11C24 /* HostViewController.swift in Sources */,
+				F6AFD4F41DA0C0A400C11C24 /* PhotoViewController.swift in Sources */,
+				F6AFD4F01DA0B07900C11C24 /* PartyInfoViewController.swift in Sources */,
 				28F43C981DA0D55500BCE785 /* NotificationJoinRequest.swift in Sources */,
-				28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */,
-				28F836831DA08301005BFF77 /* Global.swift in Sources */,
 				28F43C961DA0D32C00BCE785 /* Notification.swift in Sources */,
-				28F836871DA08929005BFF77 /* Party.swift in Sources */,
 				28F43C9C1DA0DEAD00BCE785 /* BrowseSession.swift in Sources */,
-				28F836531DA07F7F005BFF77 /* FirstViewController.swift in Sources */,
 				28F43C941DA0AE4900BCE785 /* Message.swift in Sources */,
 				28F43C9A1DA0DBC200BCE785 /* NotificationJoinApproval.swift in Sources */,
 			);
@@ -624,7 +633,9 @@
 			baseConfigurationReference = F53554B65C26FDC4812AF753 /* Pods-LitFactory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9U2WW96W28;
 				INFOPLIST_FILE = LitFactory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dankmemrs.LitFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -637,7 +648,9 @@
 			baseConfigurationReference = A7C1BBC1D90F7BA8B7AC908E /* Pods-LitFactory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9U2WW96W28;
 				INFOPLIST_FILE = LitFactory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dankmemrs.LitFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
