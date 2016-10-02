@@ -7,6 +7,8 @@ target 'LitFactory' do
 
   # Pods for LitFactory
   pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   target 'LitFactoryTests' do
     inherit! :search_paths

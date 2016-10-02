@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 struct Globals {
-    
+    static let database = FIRDatabase.database().reference()
+}
+
+func pushUserToFirebase(user: User) {
+    fb.child("Users").child(user.getID()).setValue(user.convertToDictionary())
 }

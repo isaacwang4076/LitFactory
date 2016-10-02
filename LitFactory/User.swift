@@ -16,4 +16,8 @@ class User {
         self.ID = ID
         self.name = name
     }
+    
+    func getID() -> String {
+        return ID
+    }
 }
