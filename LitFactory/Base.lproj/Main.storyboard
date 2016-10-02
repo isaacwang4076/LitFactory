@@ -370,7 +370,7 @@
         <!--Notifcations-->
         <scene sceneID="D2C-Bu-mV4">
             <objects>
-                <viewController id="QJG-Oq-wQr" sceneMemberID="viewController">
+                <viewController id="QJG-Oq-wQr" customClass="NotificationViewController" customModule="LitFactory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zag-fL-8cR"/>
                         <viewControllerLayoutGuide type="bottom" id="UGs-oC-0kh"/>
@@ -392,6 +392,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notifcations" id="sgZ-zX-CZh"/>
+                    <connections>
+                        <outlet property="notificationTableView" destination="k2Q-rU-tTU" id="YLf-4Q-av2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qs5-yS-IA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
