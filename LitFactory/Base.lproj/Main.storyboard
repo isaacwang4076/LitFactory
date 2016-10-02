@@ -355,7 +355,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JHp-mB-l2l" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="50" id="BYq-aL-9o5"/>
+                            <constraint firstItem="JHp-mB-l2l" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="BYq-aL-9o5"/>
                             <constraint firstItem="JHp-mB-l2l" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Bsk-xq-mqk"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="JHp-mB-l2l" secondAttribute="bottom" constant="50" id="Otz-CR-fCm"/>
                             <constraint firstAttribute="trailing" secondItem="JHp-mB-l2l" secondAttribute="trailing" id="wre-Hv-HUa"/>
@@ -370,7 +370,7 @@
         <!--Notifcations-->
         <scene sceneID="D2C-Bu-mV4">
             <objects>
-                <viewController id="QJG-Oq-wQr" sceneMemberID="viewController">
+                <viewController id="QJG-Oq-wQr" customClass="NotificationViewController" customModule="LitFactory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zag-fL-8cR"/>
                         <viewControllerLayoutGuide type="bottom" id="UGs-oC-0kh"/>
@@ -381,6 +381,35 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k2Q-rU-tTU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ngD-nD-mUd" customClass="NotificationTableViewCell" customModule="LitFactory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ngD-nD-mUd" id="Rzb-v6-lkS">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siO-Pf-UeZ">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="siO-Pf-UeZ" firstAttribute="centerY" secondItem="Rzb-v6-lkS" secondAttribute="centerY" id="2fe-jQ-xdc"/>
+                                                <constraint firstAttribute="trailing" secondItem="siO-Pf-UeZ" secondAttribute="trailing" constant="8" id="HnN-AT-hpv"/>
+                                                <constraint firstItem="siO-Pf-UeZ" firstAttribute="leading" secondItem="Rzb-v6-lkS" secondAttribute="leading" constant="8" id="Yv9-8e-1sO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="siO-Pf-UeZ" id="T3o-9J-uPf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QJG-Oq-wQr" id="AdP-qv-0Qs"/>
+                                    <outlet property="delegate" destination="QJG-Oq-wQr" id="9Cx-po-67k"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

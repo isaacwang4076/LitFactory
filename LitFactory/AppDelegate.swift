@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //let isaac = User(ID: "userID3", name: "Isaac3")
-        let party = Party(ID: "partyID2", hostID: "userID2", area: "area2", location: "location2")
+        //let party = Party(ID: "partyID2", hostID: "userID2", area: "area2", location: "location2")
         
         //pushUserToFirebase(user: isaac)
-        pushEventToFirebase(party: party)
+        //pushEventToFirebase(party: party)
         
         //addAttendee(attendeeID: "userID2", partyID: "partyID2")
         

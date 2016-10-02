@@ -24,6 +24,8 @@
 		F67B07C41DA0EE6300E811CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836501DA07F7F005BFF77 /* AppDelegate.swift */; };
 		F67B07C51DA0EE6500E811CB /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836861DA08929005BFF77 /* Party.swift */; };
 		F67B07C61DA0EE6800E811CB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836821DA08301005BFF77 /* Global.swift */; };
+		F67B07C81DA1169500E811CB /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67B07C71DA1169500E811CB /* NotificationViewController.swift */; };
+		F67B07CA1DA1193800E811CB /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67B07C91DA1193800E811CB /* NotificationTableViewCell.swift */; };
 		F6AFD4EE1DA0A5E000C11C24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4ED1DA0A5E000C11C24 /* HomeViewController.swift */; };
 		F6AFD4F01DA0B07900C11C24 /* PartyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4EF1DA0B07900C11C24 /* PartyInfoViewController.swift */; };
 		F6AFD4F21DA0B49200C11C24 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4F11DA0B49200C11C24 /* HostViewController.swift */; };
@@ -79,6 +81,8 @@
 		B7D3EA04852A6349984A3396 /* Pods-LitFactoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitFactoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LitFactoryUITests/Pods-LitFactoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7305C7F5CFF2C22594E2AA7 /* Pods_LitFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LitFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53554B65C26FDC4812AF753 /* Pods-LitFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitFactory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LitFactory/Pods-LitFactory.debug.xcconfig"; sourceTree = "<group>"; };
+		F67B07C71DA1169500E811CB /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F67B07C91DA1193800E811CB /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		F6AFD4ED1DA0A5E000C11C24 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F6AFD4EF1DA0B07900C11C24 /* PartyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyInfoViewController.swift; sourceTree = "<group>"; };
 		F6AFD4F11DA0B49200C11C24 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				28F43C971DA0D55500BCE785 /* NotificationJoinRequest.swift */,
 				28F43C991DA0DBC200BCE785 /* NotificationJoinApproval.swift */,
 				28F836561DA07F7F005BFF77 /* Main.storyboard */,
+				F67B07C91DA1193800E811CB /* NotificationTableViewCell.swift */,
+				F67B07C71DA1169500E811CB /* NotificationViewController.swift */,
 				F6AFD4F11DA0B49200C11C24 /* HostViewController.swift */,
 				28F836591DA07F7F005BFF77 /* Assets.xcassets */,
 				28F8365B1DA07F7F005BFF77 /* LaunchScreen.storyboard */,
@@ -474,10 +480,12 @@
 				F6AFD4EE1DA0A5E000C11C24 /* HomeViewController.swift in Sources */,
 				28F836811DA08182005BFF77 /* User.swift in Sources */,
 				F6AFD4F21DA0B49200C11C24 /* HostViewController.swift in Sources */,
+				F67B07CA1DA1193800E811CB /* NotificationTableViewCell.swift in Sources */,
 				F6AFD4F41DA0C0A400C11C24 /* PhotoViewController.swift in Sources */,
 				F6AFD4F01DA0B07900C11C24 /* PartyInfoViewController.swift in Sources */,
 				28F43C981DA0D55500BCE785 /* NotificationJoinRequest.swift in Sources */,
 				28F43C961DA0D32C00BCE785 /* Notification.swift in Sources */,
+				F67B07C81DA1169500E811CB /* NotificationViewController.swift in Sources */,
 				28F43C9C1DA0DEAD00BCE785 /* BrowseSession.swift in Sources */,
 				28F43C941DA0AE4900BCE785 /* Message.swift in Sources */,
 				28F43C9A1DA0DBC200BCE785 /* NotificationJoinApproval.swift in Sources */,
