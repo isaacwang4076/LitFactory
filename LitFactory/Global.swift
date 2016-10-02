@@ -13,7 +13,7 @@ struct Global {
     static let database: FIRDatabaseReference = FIRDatabase.database().reference()
     static var me: User! = User(ID: "userID", name: "Isaac")
     static var parties = NSMutableDictionary();
-    static var browseSession: BrowseSession = BrowseSession(supplies: nil, location: (nil, nil))
+    static var browseSession: BrowseSession = BrowseSession(supplies: nil, location: (nil,nil))
     
     // NOTIFICATION TYPE
     static let TYPE_JOIN_REQ = 0;
@@ -73,6 +73,16 @@ func getMessages() {
             })
         }
     })
+}
+
+func sendNJR(party: Party) {
+    let njr = NotificationJoinRequest(type: Global.TYPE_JOIN_REQ, pictureID: Global.me.getID(), partyID: party.getID(), partyName: party.getName(), requesterID: Global.me.getID(), requesterName: Global.me.getName(), supplies: Global.browseSession.supplies)
+    njr.pushToFirebase(usersWhoCare: [party.getHostID()])
+}
+
+func sendNJA(party: Party, approvedID: String) {
+    let nja = NotificationJoinApproval(type: Global.TYPE_JOIN_APP, pictureID: party.getHostID(), partyID: party.getID(), partyName: party.getName(), approverName: Global.me.getName())
+    nja.pushToFirebase(usersWhoCare: [approvedID])
 }
 
 // returns unique ID composed of two User's ID's in alphabetical order

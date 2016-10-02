@@ -32,6 +32,7 @@ class Message {
             "senderID": senderID,
             "receiverID": receiverID]
     }
+    
     func getText() -> String { return text }
     
     func getSenderID() -> String { return senderID }

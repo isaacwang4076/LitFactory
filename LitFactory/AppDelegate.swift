@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //let isaac = User(ID: "userID3", name: "Isaac3")
-        //let party = Party(ID: "partyID2", host: "hostName2", area: "area2", location: "location2")
+        let party = Party(ID: "partyID2", hostID: "userID2", area: "area2", location: "location2")
         
         //pushUserToFirebase(user: isaac)
-        //pushEventToFirebase(party: party)
+        pushEventToFirebase(party: party)
         
         //addAttendee(attendeeID: "userID2", partyID: "partyID2")
         
@@ -38,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nje.pushToFirebase(usersWhoCare: ["userID"])*/
         /*let nja = NotificationJoinApproval(type: Global.TYPE_JOIN_APP, pictureID: "userID", partyID: "partyID", partyName: "partyName", approverName: "Isaac1")
         nja.pushToFirebase(usersWhoCare: ["userID"])*/
+        
+        sendNJR(party: party)
+        sendNJA(party: party, approvedID: "userID2")
         
         return true
     }
