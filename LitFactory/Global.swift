@@ -92,7 +92,7 @@ func sendNJA(party: Party, approvedID: String) {
     nja.pushToFirebase(usersWhoCare: [approvedID])
 }
 
-func approveRequest(party: Party, approvedID: String) {
+func executeApproveRequest(party: Party, approvedID: String) {
     sendNJA(party: party, approvedID: approvedID)
     addAttendee(partyID: party.getID(), attendeeID: approvedID)
 }

@@ -108,18 +108,20 @@ class NotificationJoinRequest: Notification {
     
     // IMPLEMENT PROTOCOL METHODS -----------------------------------------------------------------------------
     
-    /*override func onNotificationClicked(controller: NotificationViewController, userID: String) {
+    override func onNotificationClicked(controller: NotificationViewController, userID: String) {
+        if (!viewed) {
+            // Set the local Notification to viewed
+            self.viewed = true
         
-        // Set the local Notification to viewed
-        self.viewed = true
+            // Set the Notification on the database to viewed
+            setToViewed(userID: userID)
         
-        // Set the Notification on the database to viewed
-        setToViewed(userID)
+            // Navigate to EventInfo for event
+            controller.notifToDisplay = self
+            controller.performSegue(withIdentifier: "openRequest", sender: controller);
+        }
         
-        // Navigate to EventInfo for event
-        controller.selectedPartyID = partyID
-        controller.performSegueWithIdentifier("openEventInfo", sender: controller);
-    }*/
+    }
     
     override func generateMessage() -> String {
         var message = requesterName + " has requested to join " + partyName

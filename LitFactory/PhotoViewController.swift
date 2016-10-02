@@ -11,7 +11,7 @@ import Firebase
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var partyToUpload: Party! = Party.init(ID: "dank memr", hostID: "host id", area: "marshall", location: "e-02")
+    var partyToUpload: Party! = Party.init(hostID: "host id", area: "marshall", location: "e-02")
 
     @IBOutlet var litPhoto: UIImageView!
     @IBAction func takePhoto(_ sender: AnyObject) {
@@ -31,7 +31,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         if self.litPhoto.image != nil {
             //upload to firebase
             let ID = "random ID"
-            let partyToUpload = Party.init(ID: ID, hostID: "host id", area: "marshall", location: "e-02")
+            let partyToUpload = Party.init(hostID: "host id", area: "marshall", location: "e-02")
             let pictureData = UIImagePNGRepresentation(self.litPhoto.image!)
             Global.storage.child("partyImages/\(partyToUpload.ID!).png").put(pictureData!)
             pushEventToFirebase(party: partyToUpload)

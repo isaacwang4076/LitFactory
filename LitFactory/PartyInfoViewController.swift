@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class PartyInfoViewController: UIViewController {
-
+    
     @IBOutlet var partyName: UILabel!
     @IBOutlet var genLocation: UILabel!
     @IBOutlet var partyImage: UIImageView!
@@ -25,6 +25,8 @@ class PartyInfoViewController: UIViewController {
     @IBAction func reset(_ sender: AnyObject) {
         self.navigationController?.popToRootViewController(animated: true)
     }
+    
+    var partyID:String?
     
     func showNextParty() {
         if !self.partyList.isEmpty {
@@ -52,6 +54,45 @@ class PartyInfoViewController: UIViewController {
         })
     }
     
+    func showPartyInfo(partyID: String?) {
+        
+        var party: Party?
+        if (partyID != nil) {
+            self.currentPartyIndex = 0;
+            for partySearch in partyList {
+                if (partySearch.getID() == partyID) {
+                    party = partySearch
+                    break
+                }
+            
+                self.currentPartyIndex += 1
+            }
+        
+            if (party == nil) {
+                // show message party doesn't exist
+            
+                currentPartyIndex = 0
+                showPartyInfo()
+                return
+            }
+        } else {
+            party = partyList[currentPartyIndex]
+        }
+        
+        self.partyName.text = party!.name
+        self.genLocation.text = party!.area
+        self.partyMessage.text = party!.message
+        Global.storage.child("partyImages/\(party!.ID!).png").data(withMaxSize: 100*1024*1024, completion: {
+            (data, error) in
+            if data != nil {
+                self.partyImage.image = UIImage(data: data!)
+            }
+            else {
+                print ("* no party photo")
+            }
+        })
+    }
+    
     
     var partyList:[Party] = []
     var currentPartyIndex = 0
@@ -69,7 +110,8 @@ class PartyInfoViewController: UIViewController {
                     let party = Party.init(partyDict: eachPartySnapshot.value as! NSDictionary)
                     self.partyList.append(party)
                 }
-                self.showPartyInfo()
+                
+                self.showPartyInfo(partyID: self.partyID)
             }
         })
     }

@@ -95,18 +95,23 @@ class NotificationJoinApproval: Notification {
     
     // IMPLEMENT PROTOCOL METHODS -----------------------------------------------------------------------------
     
-    /*override func onNotificationClicked(controller: NotificationViewController, userID: String) {
+    override func onNotificationClicked(controller: NotificationViewController, userID: String) {
+        if (!viewed) {
+            // Set the local Notification to viewed
+            self.viewed = true
      
-     // Set the local Notification to viewed
-     self.viewed = true
+            // Set the Notification on the database to viewed
+            setToViewed(userID: userID)
      
-     // Set the Notification on the database to viewed
-     setToViewed(userID)
-     
-     // Navigate to EventInfo for event
-     controller.selectedPartyID = partyID
-     controller.performSegueWithIdentifier("openEventInfo", sender: controller);
-     }*/
+            // Navigate to EventInfo for event
+            controller.tabBarController?.selectedIndex = 0;
+            if (controller.tabBarController?.selectedViewController is HomeViewController) {
+                (controller.tabBarController?.selectedViewController as! HomeViewController).proceedToBrowse(partyID: partyID)
+            } else {
+                (controller.tabBarController?.selectedViewController as! PartyInfoViewController).showPartyInfo(partyID: partyID)
+            }
+        }
+     }
     
     override func generateMessage() -> String {
         return approverName + " has confirmed your request to join " + partyName

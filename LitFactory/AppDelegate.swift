@@ -14,14 +14,17 @@ import FirebaseDatabase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    override init() {
+        super.init()
+        FIRApp.configure()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FIRApp.configure()
-        
         
         //let isaac = User(ID: "userID3", name: "Isaac3")
-        //let party = Party(ID: "partyID2", hostID: "userID2", area: "area2", location: "location2")
+        let party = Party(hostID: "userID", area: "area2", location: "location2")
         
         //pushUserToFirebase(user: isaac)
         //pushEventToFirebase(party: party)
@@ -38,7 +41,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nja.pushToFirebase(usersWhoCare: ["userID"])*/
         
         //sendNJR(party: party)
-        //sendNJA(party: party, approvedID: "userID2")
+        sendNJA(party: party, approvedID: "userID")
+        
+        // First pull
+        Global.database.child("Parties").observeSingleEvent(of: .value, with: { (partiesSnapshot) in
+            for partySnapshot in partiesSnapshot.children {
+                let partyDict:NSDictionary = (partySnapshot as! FIRDataSnapshot).value as! NSDictionary
+                let party:Party = Party(partyDict: partyDict)
+                setParty(party: party)
+                print("\n*Value: Party has ID", party.getID(), "parties length is now", Global.parties.count)
+                }
+        })
+            
+            // Listener for new party
+                Global.database.child("Parties").observe(.childAdded, with: {(partySnapshot) -> Void in
+                    let partyDict:NSDictionary = (partySnapshot).value as! NSDictionary
+                    let party:Party = Party(partyDict: partyDict)
+                    setParty(party: party)
+                    print("\n*ChildAdded: Party has ID ", party.getID())
+                    })
+            
+            // Listener for party change
+                Global.database.child("Parties").observe(.childChanged, with: {(partySnapshot) -> Void in
+                    let partyDict:NSDictionary = (partySnapshot).value as! NSDictionary
+                    let party:Party = Party(partyDict: partyDict)
+                    setParty(party: party)
+                    print("\n*ChildChanged: Party has ID ", party.getID())
+                    })
         
         return true
     }

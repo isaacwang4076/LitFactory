@@ -102,7 +102,7 @@ class Notification {
     // HANDLE CLICK
     // - Defines what happens when the user taps the
     //   Notification in the Notifications View
-    //func onNotificationClicked(controller: NotificationViewController, userID: String) {}
+    func onNotificationClicked(controller: NotificationViewController, userID: String) {}
     
     // GENERATE MESSAGE
     // - Defines what message will be displayed for
