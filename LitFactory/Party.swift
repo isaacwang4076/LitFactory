@@ -17,11 +17,11 @@ class Party {
     var message: String = ""
     
     init(ID: String, hostID: String, area: String, location: String) {
-        self.ID = ID
+        self.ID = generatePartyID()
         self.hostID = hostID
         self.area = area
         self.location = location
-        self.name = generateEventName();
+        self.name = generatePartyName();
     }
     
     init(partyDict: NSDictionary) {

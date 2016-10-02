@@ -19,17 +19,19 @@ class NotificationJoinRequest: Notification {
     let partyName: String!
     let requesterID: String!
     let requesterName: String!
+    let proofPhotoID: String!
     let supplies: String?
     
     // NEW NOTIFICATION CONSTRUCTOR
     // - Sets all variables and generates new notifID
-    init(type: Int, pictureID: String, partyID: String, partyName: String, requesterID: String,requesterName: String, supplies: String?) {
+    init(type: Int, pictureID: String, partyID: String, partyName: String, requesterID: String,requesterName: String, proofPhotoID: String!, supplies: String?) {
 
         // Unique variables instantiation
         self.partyID = partyID
         self.partyName = partyName
         self.requesterID = requesterID
         self.requesterName = requesterName
+        self.proofPhotoID = proofPhotoID
         self.supplies = supplies
         
         // Superclass constructor
@@ -45,6 +47,7 @@ class NotificationJoinRequest: Notification {
         self.partyName = notifDict.value(forKey: "partyName") as! String
         self.requesterID = notifDict.value(forKey: "requesterID") as! String
         self.requesterName = notifDict.value(forKey: "requesterName") as! String
+        self.proofPhotoID = notifDict.value(forKey: "proofPhotoID") as! String
         self.supplies = notifDict.value(forKey: "supplies") as! String?
         
         // Superclass constructor
@@ -59,7 +62,7 @@ class NotificationJoinRequest: Notification {
     override func convertToDictionary(notif: Notification) -> NSDictionary {
         
         // Store unique variables
-        let notifDict: NSMutableDictionary = ["partyID": (notif as! NotificationJoinRequest).partyID, "partyName": (notif as! NotificationJoinRequest).partyName, "requesterID": (notif as! NotificationJoinRequest).requesterID, "requesterName": (notif as! NotificationJoinRequest).requesterName, "supplies": (notif as! NotificationJoinRequest).supplies]
+        let notifDict: NSMutableDictionary = ["partyID": (notif as! NotificationJoinRequest).partyID, "partyName": (notif as! NotificationJoinRequest).partyName, "requesterID": (notif as! NotificationJoinRequest).requesterID, "requesterName": (notif as! NotificationJoinRequest).requesterName, "proofPhotoID": (notif as! NotificationJoinRequest).proofPhotoID, "supplies": (notif as! NotificationJoinRequest).supplies]
         
         if ((notifDict.value(forKey: "supplies") as? String) == nil) {
             notifDict.removeObject(forKey: "supplies")
