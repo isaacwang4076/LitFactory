@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //pushUserToFirebase(user: isaac)
         //pushEventToFirebase(party: party)
         
-        let message = Message(text: "This is the text", senderID: "userID", receiverID: "userID3")
+        //addAttendee(attendeeID: "userID2", partyID: "partyID2")
+        
+        let message = Message(text: "This is the text ayy", senderID: "userID", receiverID: "userID3")
         
         pushMessageToFirebase(message: message)
         

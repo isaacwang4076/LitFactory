@@ -23,7 +23,7 @@ class FirstViewController: UIViewController {
                 let partyDict:NSDictionary = (partySnapshot as! FIRDataSnapshot).value as! NSDictionary
                 let party:Party = Party(partyDict: partyDict)
                 setParty(party: party)
-                print("\n*Value: Party has ID", party.getID(), "parties length is now", Global.parties.count)
+                //print("\n*Value: Party has ID", party.getID(), "parties length is now", Global.parties.count)
             }
         })
         
@@ -32,7 +32,7 @@ class FirstViewController: UIViewController {
             let partyDict:NSDictionary = (partySnapshot).value as! NSDictionary
             let party:Party = Party(partyDict: partyDict)
             setParty(party: party)
-            print("\n*ChildAdded: Party has ID ", party.getID())
+            //print("\n*ChildAdded: Party has ID ", party.getID())
         })
         
         // Listener for party change
@@ -40,7 +40,7 @@ class FirstViewController: UIViewController {
             let partyDict:NSDictionary = (partySnapshot).value as! NSDictionary
             let party:Party = Party(partyDict: partyDict)
             setParty(party: party)
-            print("\n*ChildChanged: Party has ID ", party.getID())
+            //print("\n*ChildChanged: Party has ID ", party.getID())
         })
     }
 

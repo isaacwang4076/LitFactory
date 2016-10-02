@@ -20,6 +20,10 @@ func setParty(party: Party) {
     Global.parties[party.getID()] = party;
 }
 
+func addAttendee(attendeeID: String, partyID: String) {
+    Global.database.child("PartyIDToAttendeeIDs").child(partyID).childByAutoId().setValue(attendeeID);
+}
+
 func pushUserToFirebase(user: User) {
     Global.database.child("Users").child(user.getID()).setValue(user.getAsDictionary())
 }

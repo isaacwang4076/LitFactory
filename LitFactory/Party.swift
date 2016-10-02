@@ -14,7 +14,7 @@ class Party {
     let area: String!
     let location: String!
     let name: String!
-    var attendees: [String] = [String]()
+    //var attendees: [String] = [String]()
     var message: String = ""
     
     init(ID: String, host: String, area: String, location: String) {
@@ -31,9 +31,9 @@ class Party {
         self.area = partyDict.value(forKey: "area") as! String!
         self.location = partyDict.value(forKey: "location") as! String!
         self.name = partyDict.value(forKey: "name") as! String!
-        if (partyDict.value(forKey: "attendees") != nil) {
+        /*if (partyDict.value(forKey: "attendees") != nil) {
             self.attendees = partyDict.value(forKey: "attendees") as! [String]
-        }
+        }*/
         self.message = partyDict.value(forKey: "message") as! String!
     }
     
@@ -44,13 +44,13 @@ class Party {
             "area": area,
             "location": location,
             "name": name,
-            "attendees": attendees,
+            /*"attendees": attendees,*/
             "message": message]
     }
     
-    func addAttendee(newAttendeeID: String) {
+    /*func addAttendee(newAttendeeID: String) {
         attendees.append(newAttendeeID)
-    }
+    }*/
     
     func setMessage(newMessage: String) {
         message = newMessage
