@@ -11,9 +11,13 @@ import FirebaseDatabase
 
 struct Global {
     static let database: FIRDatabaseReference = FIRDatabase.database().reference()
+    static var me: User! = User(ID: "userID", name: "Isaac")
     static var parties = NSMutableDictionary();
     
-    static var me: User! = User(ID: "userID", name: "Isaac")
+    // NOTIFICATION TYPE
+    static let TYPE_JOIN_REQ = 0;
+    static let TYPE_JOIN_APP = 1;
+
 }
 
 func setParty(party: Party) {
@@ -57,13 +61,14 @@ func pushMessageToFirebase(message: Message) {
 }
 
 // untested
-func getMessages(fromUserWithID: String) {
-    Global.database.child("UserIDToConversationIDs").child(Global.me.getID()).observe( .childAdded, with: { (conversationIDsSnapshot) in
-        for conversationIDSnapshot in conversationIDsSnapshot.children {
+func getMessages() {
+    Global.database.child("UserIDToConversationIDs").child(Global.me.getID()).observe(.value, with: { (conversationIDsSnapshot) in
+        for conversationIDSnapshot in conversationIDsSnapshot.children.allObjects {
             Global.database.child("Conversations").child((conversationIDSnapshot as! FIRDataSnapshot).value as! String).observeSingleEvent(of: .value, with: {(conversationSnapshot) in
-                for messageSnapshot in conversationSnapshot.children {
-                    let message = Message(messageDict: (messageSnapshot as! FIRDataSnapshot).value as! NSDictionary)
-                    print("\n", message.text)
+                for messageSnapshot in conversationSnapshot.children.allObjects {
+                    let messageDict: NSDictionary = (messageSnapshot as! FIRDataSnapshot).value as! NSDictionary
+                    let message = Message(messageDict: messageDict)
+                    print("\n*Text is :", message.getText())
                 }
             })
         }
@@ -84,4 +89,9 @@ func generateEventName() -> String {
 
 func generateMessageID() -> String {
     return "messageID"
+}
+
+func generateNotifID() -> String {
+    let newID = " "
+    return newID
 }

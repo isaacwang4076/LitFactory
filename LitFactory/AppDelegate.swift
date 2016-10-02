@@ -28,9 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //addAttendee(attendeeID: "userID2", partyID: "partyID2")
         
-        let message = Message(text: "This is the text ayy", senderID: "userID", receiverID: "userID3")
+        //let message = Message(text: "This is the text ayy", senderID: "userID", receiverID: "userID3")
         
-        pushMessageToFirebase(message: message)
+        //pushMessageToFirebase(message: message)
+        
+        //getMessages()
+        
+        /*let nje = NotificationJoinRequest(type: Global.TYPE_JOIN_REQ, pictureID: "userID2", partyID: "partyID", partyName: "partyName", requesterID: "userID2", requesterName: "Isaac2")
+        nje.pushToFirebase(usersWhoCare: ["userID"])*/
+        let nja = NotificationJoinApproval(type: Global.TYPE_JOIN_APP, pictureID: "userID", partyID: "partyID", partyName: "partyName", approverName: "Isaac1")
+        nja.pushToFirebase(usersWhoCare: ["userID"])
         
         return true
     }
