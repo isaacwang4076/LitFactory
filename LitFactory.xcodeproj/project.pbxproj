@@ -13,17 +13,17 @@
 		28F43C981DA0D55500BCE785 /* NotificationJoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F43C971DA0D55500BCE785 /* NotificationJoinRequest.swift */; };
 		28F43C9A1DA0DBC200BCE785 /* NotificationJoinApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F43C991DA0DBC200BCE785 /* NotificationJoinApproval.swift */; };
 		28F43C9C1DA0DEAD00BCE785 /* BrowseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F43C9B1DA0DEAD00BCE785 /* BrowseSession.swift */; };
-		28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836501DA07F7F005BFF77 /* AppDelegate.swift */; };
 		28F836581DA07F7F005BFF77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F836561DA07F7F005BFF77 /* Main.storyboard */; };
 		28F8365A1DA07F7F005BFF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F836591DA07F7F005BFF77 /* Assets.xcassets */; };
 		28F8365D1DA07F7F005BFF77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F8365B1DA07F7F005BFF77 /* LaunchScreen.storyboard */; };
 		28F836681DA07F7F005BFF77 /* LitFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836671DA07F7F005BFF77 /* LitFactoryTests.swift */; };
 		28F836731DA07F7F005BFF77 /* LitFactoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836721DA07F7F005BFF77 /* LitFactoryUITests.swift */; };
 		28F836811DA08182005BFF77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836801DA08182005BFF77 /* User.swift */; };
-		28F836831DA08301005BFF77 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836821DA08301005BFF77 /* Global.swift */; };
-		28F836871DA08929005BFF77 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836861DA08929005BFF77 /* Party.swift */; };
 		C0A9742C8856750A91C5A1A6 /* Pods_LitFactoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B037D2E78184423AF031CB /* Pods_LitFactoryTests.framework */; };
 		F40D83C5CB9898966592A0D7 /* Pods_LitFactoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7C4971271C4FDF9F5D6972 /* Pods_LitFactoryUITests.framework */; };
+		F67B07C41DA0EE6300E811CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836501DA07F7F005BFF77 /* AppDelegate.swift */; };
+		F67B07C51DA0EE6500E811CB /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836861DA08929005BFF77 /* Party.swift */; };
+		F67B07C61DA0EE6800E811CB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836821DA08301005BFF77 /* Global.swift */; };
 		F6AFD4EE1DA0A5E000C11C24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4ED1DA0A5E000C11C24 /* HomeViewController.swift */; };
 		F6AFD4F01DA0B07900C11C24 /* PartyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4EF1DA0B07900C11C24 /* PartyInfoViewController.swift */; };
 		F6AFD4F21DA0B49200C11C24 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFD4F11DA0B49200C11C24 /* HostViewController.swift */; };
@@ -468,19 +468,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67B07C61DA0EE6800E811CB /* Global.swift in Sources */,
+				F67B07C51DA0EE6500E811CB /* Party.swift in Sources */,
+				F67B07C41DA0EE6300E811CB /* AppDelegate.swift in Sources */,
 				F6AFD4EE1DA0A5E000C11C24 /* HomeViewController.swift in Sources */,
 				28F836811DA08182005BFF77 /* User.swift in Sources */,
 				F6AFD4F21DA0B49200C11C24 /* HostViewController.swift in Sources */,
-				28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */,
-				28F836831DA08301005BFF77 /* Global.swift in Sources */,
 				F6AFD4F41DA0C0A400C11C24 /* PhotoViewController.swift in Sources */,
-				28F836871DA08929005BFF77 /* Party.swift in Sources */,
 				F6AFD4F01DA0B07900C11C24 /* PartyInfoViewController.swift in Sources */,
 				28F43C981DA0D55500BCE785 /* NotificationJoinRequest.swift in Sources */,
-				28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */,
-				28F836831DA08301005BFF77 /* Global.swift in Sources */,
 				28F43C961DA0D32C00BCE785 /* Notification.swift in Sources */,
-				28F836871DA08929005BFF77 /* Party.swift in Sources */,
 				28F43C9C1DA0DEAD00BCE785 /* BrowseSession.swift in Sources */,
 				28F43C941DA0AE4900BCE785 /* Message.swift in Sources */,
 				28F43C9A1DA0DBC200BCE785 /* NotificationJoinApproval.swift in Sources */,
