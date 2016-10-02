@@ -10,16 +10,15 @@ import Foundation
 
 class Party {
     let ID: String!
-    let host: String!
+    let hostID: String!
     let area: String!
     let location: String!
     let name: String!
-    var attendees: [String] = [String]()
     var message: String = ""
     
-    init(ID: String, host: String, area: String, location: String) {
+    init(ID: String, hostID: String, area: String, location: String) {
         self.ID = ID
-        self.host = host
+        self.hostID = hostID
         self.area = area
         self.location = location
         self.name = generateEventName();
@@ -27,7 +26,7 @@ class Party {
     
     init(partyDict: NSDictionary) {
         self.ID = partyDict.value(forKey: "ID") as! String!
-        self.host = partyDict.value(forKey: "host") as! String!
+        self.hostID = partyDict.value(forKey: "hostID") as! String!
         self.area = partyDict.value(forKey: "area") as! String!
         self.location = partyDict.value(forKey: "location") as! String!
         self.name = partyDict.value(forKey: "name") as! String!
@@ -37,16 +36,11 @@ class Party {
     func getAsDictionary() -> NSDictionary {
         return [
             "ID": ID,
-            "host": host,
+            "hostID": hostID,
             "area": area,
             "location": location,
             "name": name,
-            "attendees": attendees,
             "message": message]
-    }
-    
-    func addAttendee(newAttendeeID: String) {
-        attendees.append(newAttendeeID)
     }
     
     func setMessage(newMessage: String) {
@@ -54,6 +48,14 @@ class Party {
     }
     
     func getID() -> String {
-        return ID;
+        return ID
+    }
+    
+    func getName() -> String {
+        return name
+    }
+    
+    func getHostID() -> String {
+        return hostID
     }
 }

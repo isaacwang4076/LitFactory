@@ -26,4 +26,7 @@ class User {
     func getID() -> String {
         return ID
     }
+    func getName() -> String {
+        return name
+    }
 }

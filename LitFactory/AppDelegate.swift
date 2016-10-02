@@ -20,23 +20,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         
         
-        let isaac = User(ID: "userID", name: "Isaac")
-        let party = Party(ID: "partyID", host: "hostName", area: "area", location: "location")
+        //let isaac = User(ID: "userID3", name: "Isaac3")
+        let party = Party(ID: "partyID2", hostID: "userID2", area: "area2", location: "location2")
         
-        pushUserToFirebase(user: isaac)
+        //pushUserToFirebase(user: isaac)
         pushEventToFirebase(party: party)
         
-        // Listener for new party
-        /*Global.database.child("Parties").observe(.childAdded, with: {(partySnapshot) -> Void in
-            let party:Party = Party(partyDict: (partySnapshot).value as! NSDictionary)
-            setParty(party: party)
-        })
+        //addAttendee(attendeeID: "userID2", partyID: "partyID2")
         
-        // Listener for party change
-        Global.database.child("Parties").observe(.childChanged, with: {(partySnapshot) -> Void in
-            let party:Party = Party(partyDict: (partySnapshot).value as! NSDictionary)
-            setParty(party: party)
-        })*/
+        //let message = Message(text: "This is the text ayy", senderID: "userID", receiverID: "userID3")
+        
+        //pushMessageToFirebase(message: message)
+        
+        //getMessages()
+        
+        /*let nje = NotificationJoinRequest(type: Global.TYPE_JOIN_REQ, pictureID: "userID2", partyID: "partyID", partyName: "partyName", requesterID: "userID2", requesterName: "Isaac2", supplies: "Fifth of Smirnoff")
+        nje.pushToFirebase(usersWhoCare: ["userID"])*/
+        /*let nja = NotificationJoinApproval(type: Global.TYPE_JOIN_APP, pictureID: "userID", partyID: "partyID", partyName: "partyName", approverName: "Isaac1")
+        nja.pushToFirebase(usersWhoCare: ["userID"])*/
+        
+        sendNJR(party: party)
+        sendNJA(party: party, approvedID: "userID2")
         
         return true
     }
