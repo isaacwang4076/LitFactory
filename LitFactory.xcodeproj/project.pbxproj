@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28F43C921DA0954E00BCE785 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28F43C911DA0954E00BCE785 /* GoogleService-Info.plist */; };
+		28F43C941DA0AE4900BCE785 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F43C931DA0AE4900BCE785 /* Message.swift */; };
 		28F836511DA07F7F005BFF77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836501DA07F7F005BFF77 /* AppDelegate.swift */; };
 		28F836531DA07F7F005BFF77 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836521DA07F7F005BFF77 /* FirstViewController.swift */; };
 		28F836551DA07F7F005BFF77 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F836541DA07F7F005BFF77 /* SecondViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		28F43C911DA0954E00BCE785 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28F43C931DA0AE4900BCE785 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		28F8364D1DA07F7F005BFF77 /* LitFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F836501DA07F7F005BFF77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F836521DA07F7F005BFF77 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				28F836501DA07F7F005BFF77 /* AppDelegate.swift */,
 				28F836801DA08182005BFF77 /* User.swift */,
 				28F836861DA08929005BFF77 /* Party.swift */,
+				28F43C931DA0AE4900BCE785 /* Message.swift */,
 				28F836821DA08301005BFF77 /* Global.swift */,
 				28F836521DA07F7F005BFF77 /* FirstViewController.swift */,
 				28F836541DA07F7F005BFF77 /* SecondViewController.swift */,
@@ -452,6 +455,7 @@
 				28F836831DA08301005BFF77 /* Global.swift in Sources */,
 				28F836871DA08929005BFF77 /* Party.swift in Sources */,
 				28F836531DA07F7F005BFF77 /* FirstViewController.swift in Sources */,
+				28F43C941DA0AE4900BCE785 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

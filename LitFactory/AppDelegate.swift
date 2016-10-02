@@ -20,23 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         
         
-        let isaac = User(ID: "userID", name: "Isaac")
-        let party = Party(ID: "partyID", host: "hostName", area: "area", location: "location")
+        //let isaac = User(ID: "userID3", name: "Isaac3")
+        //let party = Party(ID: "partyID2", host: "hostName2", area: "area2", location: "location2")
         
-        pushUserToFirebase(user: isaac)
-        pushEventToFirebase(party: party)
+        //pushUserToFirebase(user: isaac)
+        //pushEventToFirebase(party: party)
         
-        // Listener for new party
-        /*Global.database.child("Parties").observe(.childAdded, with: {(partySnapshot) -> Void in
-            let party:Party = Party(partyDict: (partySnapshot).value as! NSDictionary)
-            setParty(party: party)
-        })
+        let message = Message(text: "This is the text", senderID: "userID", receiverID: "userID3")
         
-        // Listener for party change
-        Global.database.child("Parties").observe(.childChanged, with: {(partySnapshot) -> Void in
-            let party:Party = Party(partyDict: (partySnapshot).value as! NSDictionary)
-            setParty(party: party)
-        })*/
+        pushMessageToFirebase(message: message)
         
         return true
     }
